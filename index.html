@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Pro Admin Dashboard</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body class="light-mode">
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo">
+        <div class="logo-icon">3D</div>
+        <span class="logo-text">Pro Admin</span>
+      </div>
+      
+      <nav class="sidebar-menu">
+        <ul>
+          <li class="menu-item active" data-section="dashboard">
+            <div class="menu-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            </div>
+            <span>Dashboard</span>
+          </li>
+          <li class="menu-item" data-section="users">
+            <div class="menu-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+            <span>Users</span>
+          </li>
+          <li class="menu-item" data-section="products">
+            <div class="menu-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            </div>
+            <span>Products</span>
+          </li>
+          <li class="menu-item" data-section="orders">
+            <div class="menu-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            </div>
+            <span>Orders</span>
+          </li>
+          <li class="menu-item" data-section="analytics">
+            <div class="menu-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            </div>
+            <span>Analytics</span>
+          </li>
+          <li class="menu-item" data-section="settings">
+            <div class="menu-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            </div>
+            <span>Settings</span>
+          </li>
+        </ul>
+      </nav>
+      
+      <div class="theme-toggle">
+        <div class="toggle-track">
+          <div class="toggle-thumb"></div>
+        </div>
+        <span class="toggle-label">Dark Mode</span>
+      </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+      <header class="top-bar">
+        <button class="menu-toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+        <div class="search-bar">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" placeholder="Search...">
+        </div>
+        <div class="user-profile">
+          <div class="notification-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            <span class="badge">3</span>
+          </div>
+          <div class="avatar">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+          </div>
+        </div>
+      </header>
+      
+      <!-- 3D Cube Container -->
+      <div class="cube-container">
+        <div class="cube">
+          <!-- Dashboard Section -->
+          <div class="cube-face dashboard-section active">
+            <h1 class="section-title">Dashboard Overview</h1>
+            <div class="stats-container">
+              <div class="stat-card">
+                <div class="stat-icon users-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </div>
+                <div class="stat-content">
+                  <h3>Total Users</h3>
+                  <div class="stat-value" data-target="12458">0</div>
+                  <div class="stat-change positive">+12.5%</div>
+                </div>
+                <canvas class="stat-chart" width="100" height="40"></canvas>
+              </div>
+              
+              <div class="stat-card">
+                <div class="stat-icon revenue-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                </div>
+                <div class="stat-content">
+                  <h3>Revenue</h3>
+                  <div class="stat-value" data-target="854621">$0</div>
+                  <div class="stat-change positive">+8.2%</div>
+                </div>
+                <canvas class="stat-chart" width="100" height="40"></canvas>
+              </div>
+              
+              <div class="stat-card">
+                <div class="stat-icon orders-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                </div>
+                <div class="stat-content">
+                  <h3>Orders</h3>
+                  <div class="stat-value" data-target="3254">0</div>
+                  <div class="stat-change positive">+5.7%</div>
+                </div>
+                <canvas class="stat-chart" width="100" height="40"></canvas>
+              </div>
+              
+              <div class="stat-card">
+                <div class="stat-icon products-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                </div>
+                <div class="stat-content">
+                  <h3>Products</h3>
+                  <div class="stat-value" data-target="1287">0</div>
+                  <div class="stat-change negative">-2.3%</div>
+                </div>
+                <canvas class="stat-chart" width="100" height="40"></canvas>
+              </div>
+            </div>
+            
+            <div class="dashboard-charts">
+              <div class="chart-container sales-chart">
+                <div class="chart-header">
+                  <h3>Sales Overview</h3>
+                  <div class="chart-controls">
+                    <button class="chart-control active" data-period="weekly">Weekly</button>
+                    <button class="chart-control" data-period="monthly">Monthly</button>
+                    <button class="chart-control" data-period="yearly">Yearly</button>
+                  </div>
+                </div>
+                <canvas id="salesChart" width="600" height="250"></canvas>
+              </div>
+              
+              <div class="chart-container traffic-chart">
+                <div class="chart-header">
+                  <h3>Traffic Sources</h3>
+                  <div class="chart-legend">
+                    <div class="legend-item">
+                      <span class="legend-color" style="background-color: #4361ee;"></span>
+                      <span>Direct</span>
+                    </div>
+                    <div class="legend-item">
+                      <span class="legend-color" style="background-color: #3a0ca3;"></span>
+                      <span>Social</span>
+                    </div>
+                    <div class="legend-item">
+                      <span class="legend-color" style="background-color: #7209b7;"></span>
+                      <span>Referral</span>
+                    </div>
+                    <div class="legend-item">
+                      <span class="legend-color" style="background-color: #f72585;"></span>
+                      <span>Organic</span>
+                    </div>
+                  </div>
+                </div>
+                <canvas id="trafficChart" width="300" height="300"></canvas>
+              </div>
+            </div>
+            
+            <div class="recent-activity">
+              <h3>Recent Activity</h3>
+              <div class="activity-list">
+                <div class="activity-item">
+                  <div class="activity-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  </div>
+                  <div class="activity-content">
+                    <p><strong>John Doe</strong> created a new account</p>
+                    <span class="activity-time">2 hours ago</span>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                  </div>
+                  <div class="activity-content">
+                    <p><strong>Sarah Johnson</strong> placed a new order</p>
+                    <span class="activity-time">3 hours ago</span>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div class="activity-content">
+                    <p><strong>Marketing Team</strong> sent a newsletter</p>
+                    <span class="activity-time">5 hours ago</span>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  </div>
+                  <div class="activity-content">
+                    <p><strong>Product Team</strong> updated inventory</p>
+                    <span class="activity-time">8 hours ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Users Section -->
+          <div class="cube-face users-section">
+            <h1 class="section-title">User Management</h1>
+            <div class="section-controls">
+              <div class="search-filter">
+                <input type="text" placeholder="Search users...">
+                <button class="filter-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                  Filter
+                </button>
+              </div>
+              <button class="add-user-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                Add User
+              </button>
+            </div>
+            
+            <div class="user-cards">
+              <div class="user-card">
+                <div class="user-card-inner">
+                  <div class="user-card-front">
+                    <div class="user-avatar">
+                      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                    </div>
+                    <div class="user-info">
+                      <h3>John Doe</h3>
+                      <p>Product Manager</p>
+                      <div class="user-status active">Active</div>
+                    </div>
+                  </div>
+                  <div class="user-card-back">
+                    <h4>User Details</h4>
+                    <div class="user-details">
+                      <div class="detail-item">
+                        <span class="detail-label">Email:</span>
+                        <span class="detail-value">john.doe@example.com</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Phone:</span>
+                        <span class="detail-value">+1 (555) 123-4567</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Joined:</span>
+                        <span class="detail-value">Jan 15, 2023</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Last Login:</span>
+                        <span class="detail-value">Today, 10:45 AM</span>
+                      </div>
+                    </div>
+                    <div class="user-actions">
+                      <button class="edit-btn">Edit</button>
+                      <button class="delete-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="user-card">
+                <div class="user-card-inner">
+                  <div class="user-card-front">
+                    <div class="user-avatar">
+                      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+                    </div>
+                    <div class="user-info">
+                      <h3>Sarah Johnson</h3>
+                      <p>UX Designer</p>
+                      <div class="user-status active">Active</div>
+                    </div>
+                  </div>
+                  <div class="user-card-back">
+                    <h4>User Details</h4>
+                    <div class="user-details">
+                      <div class="detail-item">
+                        <span class="detail-label">Email:</span>
+                        <span class="detail-value">sarah.j@example.com</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Phone:</span>
+                        <span class="detail-value">+1 (555) 987-6543</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Joined:</span>
+                        <span class="detail-value">Mar 22, 2023</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Last Login:</span>
+                        <span class="detail-value">Today, 9:30 AM</span>
+                      </div>
+                    </div>
+                    <div class="user-actions">
+                      <button class="edit-btn">Edit</button>
+                      <button class="delete-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="user-card">
+                <div class="user-card-inner">
+                  <div class="user-card-front">
+                    <div class="user-avatar">
+                      <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="User">
+                    </div>
+                    <div class="user-info">
+                      <h3>Michael Chen</h3>
+                      <p>Developer</p>
+                      <div class="user-status active">Active</div>
+                    </div>
+                  </div>
+                  <div class="user-card-back">
+                    <h4>User Details</h4>
+                    <div class="user-details">
+                      <div class="detail-item">
+                        <span class="detail-label">Email:</span>
+                        <span class="detail-value">michael.c@example.com</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Phone:</span>
+                        <span class="detail-value">+1 (555) 234-5678</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Joined:</span>
+                        <span class="detail-value">Feb 8, 2023</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Last Login:</span>
+                        <span class="detail-value">Yesterday, 5:15 PM</span>
+                      </div>
+                    </div>
+                    <div class="user-actions">
+                      <button class="edit-btn">Edit</button>
+                      <button class="delete-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="user-card">
+                <div class="user-card-inner">
+                  <div class="user-card-front">
+                    <div class="user-avatar">
+                      <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="User">
+                    </div>
+                    <div class="user-info">
+                      <h3>Emily Rodriguez</h3>
+                      <p>Marketing Specialist</p>
+                      <div class="user-status inactive">Inactive</div>
+                    </div>
+                  </div>
+                  <div class="user-card-back">
+                    <h4>User Details</h4>
+                    <div class="user-details">
+                      <div class="detail-item">
+                        <span class="detail-label">Email:</span>
+                        <span class="detail-value">emily.r@example.com</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Phone:</span>
+                        <span class="detail-value">+1 (555) 876-5432</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Joined:</span>
+                        <span class="detail-value">Apr 17, 2023</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Last Login:</span>
+                        <span class="detail-value">3 days ago</span>
+                      </div>
+                    </div>
+                    <div class="user-actions">
+                      <button class="edit-btn">Edit</button>
+                      <button class="delete-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="user-card">
+                <div class="user-card-inner">
+                  <div class="user-card-front">
+                    <div class="user-avatar">
+                      <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="User">
+                    </div>
+                    <div class="user-info">
+                      <h3>David Wilson</h3>
+                      <p>Sales Manager</p>
+                      <div class="user-status active">Active</div>
+                    </div>
+                  </div>
+                  <div class="user-card-back">
+                    <h4>User Details</h4>
+                    <div class="user-details">
+                      <div class="detail-item">
+                        <span class="detail-label">Email:</span>
+                        <span class="detail-value">david.w@example.com</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Phone:</span>
+                        <span class="detail-value">+1 (555) 345-6789</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Joined:</span>
+                        <span class="detail-value">May 3, 2023</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Last Login:</span>
+                        <span class="detail-value">Today, 8:20 AM</span>
+                      </div>
+                    </div>
+                    <div class="user-actions">
+                      <button class="edit-btn">Edit</button>
+                      <button class="delete-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="user-card">
+                <div class="user-card-inner">
+                  <div class="user-card-front">
+                    <div class="user-avatar">
+                      <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="User">
+                    </div>
+                    <div class="user-info">
+                      <h3>Olivia Taylor</h3>
+                      <p>Customer Support</p>
+                      <div class="user-status active">Active</div>
+                    </div>
+                  </div>
+                  <div class="user-card-back">
+                    <h4>User Details</h4>
+                    <div class="user-details">
+                      <div class="detail-item">
+                        <span class="detail-label">Email:</span>
+                        <span class="detail-value">olivia.t@example.com</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Phone:</span>
+                        <span class="detail-value">+1 (555) 456-7890</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Joined:</span>
+                        <span class="detail-value">Jun 12, 2023</span>
+                      </div>
+                      <div class="detail-item">
+                        <span class="detail-label">Last Login:</span>
+                        <span class="detail-value">Today, 11:05 AM</span>
+                      </div>
+                    </div>
+                    <div class="user-actions">
+                      <button class="edit-btn">Edit</button>
+                      <button class="delete-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Products Section -->
+          <div class="cube-face products-section">
+            <h1 class="section-title">Product Control</h1>
+            <div class="section-controls">
+              <div class="search-filter">
+                <input type="text" placeholder="Search products...">
+                <button class="filter-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                  Filter
+                </button>
+              </div>
+              <button class="add-product-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                Add Product
+              </button>
+            </div>
+            
+            <div class="product-cards">
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="https://via.placeholder.com/150" alt="Product">
+                </div>
+                <div class="product-info">
+                  <h3>Premium Headphones</h3>
+                  <p class="product-category">Electronics</p>
+                  <div class="product-price">$129.99</div>
+                  <div class="product-stock">In Stock: 45</div>
+                </div>
+                <div class="product-actions">
+                  <button class="edit-btn">Edit</button>
+                  <button class="view-btn">View</button>
+                </div>
+              </div>
+              
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="https://via.placeholder.com/150" alt="Product">
+                </div>
+                <div class="product-info">
+                  <h3>Wireless Mouse</h3>
+                  <p class="product-category">Electronics</p>
+                  <div class="product-price">$49.99</div>
+                  <div class="product-stock">In Stock: 78</div>
+                </div>
+                <div class="product-actions">
+                  <button class="edit-btn">Edit</button>
+                  <button class="view-btn">View</button>
+                </div>
+              </div>
+              
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="https://via.placeholder.com/150" alt="Product">
+                </div>
+                <div class="product-info">
+                  <h3>Ergonomic Chair</h3>
+                  <p class="product-category">Furniture</p>
+                  <div class="product-price">$249.99</div>
+                  <div class="product-stock">In Stock: 12</div>
+                </div>
+                <div class="product-actions">
+                  <button class="edit-btn">Edit</button>
+                  <button class="view-btn">View</button>
+                </div>
+              </div>
+              
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="https://via.placeholder.com/150" alt="Product">
+                </div>
+                <div class="product-info">
+                  <h3>Smart Watch</h3>
+                  <p class="product-category">Electronics</p>
+                  <div class="product-price">$199.99</div>
+                  <div class="product-stock">In Stock: 23</div>
+                </div>
+                <div class="product-actions">
+                  <button class="edit-btn">Edit</button>
+                  <button class="view-btn">View</button>
+                </div>
+              </div>
+              
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="https://via.placeholder.com/150" alt="Product">
+                </div>
+                <div class="product-info">
+                  <h3>Desk Lamp</h3>
+                  <p class="product-category">Home Decor</p>
+                  <div class="product-price">$39.99</div>
+                  <div class="product-stock">In Stock: 56</div>
+                </div>
+                <div class="product-actions">
+                  <button class="edit-btn">Edit</button>
+                  <button class="view-btn">View</button>
+                </div>
+              </div>
+              
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="https://via.placeholder.com/150" alt="Product">
+                </div>
+                <div class="product-info">
+                  <h3>Bluetooth Speaker</h3>
+                  <p class="product-category">Electronics</p>
+                  <div class="product-price">$79.99</div>
+                  <div class="product-stock">In Stock: 34</div>
+                </div>
+                <div class="product-actions">
+                  <button class="edit-btn">Edit</button>
+                  <button class="view-btn">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Orders Section -->
+          <div class="cube-face orders-section">
+            <h1 class="section-title">Orders</h1>
+            <div class="section-controls">
+              <div class="search-filter">
+                <input type="text" placeholder="Search orders...">
+                <button class="filter-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                  Filter
+                </button>
+              </div>
+              <div class="order-status-filter">
+                <button class="status-btn active" data-status="all">All</button>
+                <button class="status-btn" data-status="pending">Pending</button>
+                <button class="status-btn" data-status="processing">Processing</button>
+                <button class="status-btn" data-status="completed">Completed</button>
+                <button class="status-btn" data-status="cancelled">Cancelled</button>
+              </div>
+            </div>
+            
+            <div class="order-tiles">
+              <div class="order-tile">
+                <div class="order-tile-inner">
+                  <div class="order-tile-front">
+                    <div class="order-header">
+                      <div class="order-id">#ORD-2023-8754</div>
+                      <div class="order-status pending">Pending</div>
+                    </div>
+                    <div class="order-customer">
+                      <div class="customer-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer">
+                      </div>
+                      <div class="customer-info">
+                        <h4>Sarah Johnson</h4>
+                        <p>sarah.j@example.com</p>
+                      </div>
+                    </div>
+                    <div class="order-summary">
+                      <div class="order-date">May 15, 2023</div>
+                      <div class="order-amount">$249.99</div>
+                      <div class="order-items">3 items</div>
+                    </div>
+                  </div>
+                  <div class="order-tile-back">
+                    <h4>Order Details</h4>
+                    <div class="order-products">
+                      <div class="order-product">
+                        <span class="product-name">Premium Headphones</span>
+                        <span class="product-quantity">1 x</span>
+                        <span class="product-price">$129.99</span>
+                      </div>
+                      <div class="order-product">
+                        <span class="product-name">Wireless Mouse</span>
+                        <span class="product-quantity">2 x</span>
+                        <span class="product-price">$49.99</span>
+                      </div>
+                      <div class="order-product">
+                        <span class="product-name">Desk Lamp</span>
+                        <span class="product-quantity">1 x</span>
+                        <span class="product-price">$39.99</span>
+                      </div>
+                    </div>
+                    <div class="order-total">
+                      <span>Total:</span>
+                      <span>$249.99</span>
+                    </div>
+                    <div class="order-actions">
+                      <button class="process-btn">Process</button>
+                      <button class="invoice-btn">Invoice</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="order-tile">
+                <div class="order-tile-inner">
+                  <div class="order-tile-front">
+                    <div class="order-header">
+                      <div class="order-id">#ORD-2023-8753</div>
+                      <div class="order-status processing">Processing</div>
+                    </div>
+                    <div class="order-customer">
+                      <div class="customer-avatar">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Customer">
+                      </div>
+                      <div class="customer-info">
+                        <h4>John Doe</h4>
+                        <p>john.doe@example.com</p>
+                      </div>
+                    </div>
+                    <div class="order-summary">
+                      <div class="order-date">May 14, 2023</div>
+                      <div class="order-amount">$199.99</div>
+                      <div class="order-items">1 item</div>
+                    </div>
+                  </div>
+                  <div class="order-tile-back">
+                    <h4>Order Details</h4>
+                    <div class="order-products">
+                      <div class="order-product">
+                        <span class="product-name">Smart Watch</span>
+                        <span class="product-quantity">1 x</span>
+                        <span class="product-price">$199.99</span>
+                      </div>
+                    </div>
+                    <div class="order-total">
+                      <span>Total:</span>
+                      <span>$199.99</span>
+                    </div>
+                    <div class="order-actions">
+                      <button class="complete-btn">Complete</button>
+                      <button class="invoice-btn">Invoice</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="order-tile">
+                <div class="order-tile-inner">
+                  <div class="order-tile-front">
+                    <div class="order-header">
+                      <div class="order-id">#ORD-2023-8752</div>
+                      <div class="order-status completed">Completed</div>
+                    </div>
+                    <div class="order-customer">
+                      <div class="customer-avatar">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Customer">
+                      </div>
+                      <div class="customer-info">
+                        <h4>Michael Chen</h4>
+                        <p>michael.c@example.com</p>
+                      </div>
+                    </div>
+                    <div class="order-summary">
+                      <div class="order-date">May 12, 2023</div>
+                      <div class="order-amount">$329.98</div>
+                      <div class="order-items">2 items</div>
+                    </div>
+                  </div>
+                  <div class="order-tile-back">
+                    <h4>Order Details</h4>
+                    <div class="order-products">
+                      <div class="order-product">
+                        <span class="product-name">Ergonomic Chair</span>
+                        <span class="product-quantity">1 x</span>
+                        <span class="product-price">$249.99</span>
+                      </div>
+                      <div class="order-product">
+                        <span class="product-name">Bluetooth Speaker</span>
+                        <span class="product-quantity">1 x</span>
+                        <span class="product-price">$79.99</span>
+                      </div>
+                    </div>
+                    <div class="order-total">
+                      <span>Total:</span>
+                      <span>$329.98</span>
+                    </div>
+                    <div class="order-actions">
+                      <button class="view-btn">View</button>
+                      <button class="invoice-btn">Invoice</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="order-tile">
+                <div class="order-tile-inner">
+                  <div class="order-tile-front">
+                    <div class="order-header">
+                      <div class="order-id">#ORD-2023-8751</div>
+                      <div class="order-status cancelled">Cancelled</div>
+                    </div>
+                    <div class="order-customer">
+                      <div class="customer-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Customer">
+                      </div>
+                      <div class="customer-info">
+                        <h4>Emily Rodriguez</h4>
+                        <p>emily.r@example.com</p>
+                      </div>
+                    </div>
+                    <div class="order-summary">
+                      <div class="order-date">May 10, 2023</div>
+                      <div class="order-amount">$49.99</div>
+                      <div class="order-items">1 item</div>
+                    </div>
+                  </div>
+                  <div class="order-tile-back">
+                    <h4>Order Details</h4>
+                    <div class="order-products">
+                      <div class="order-product">
+                        <span class="product-name">Wireless Mouse</span>
+                        <span class="product-quantity">1 x</span>
+                        <span class="product-price">$49.99</span>
+                      </div>
+                    </div>
+                    <div class="order-total">
+                      <span>Total:</span>
+                      <span>$49.99</span>
+                    </div>
+                    <div class="order-actions">
+                      <button class="view-btn">View</button>
+                      <button class="reorder-btn">Reorder</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Analytics Section -->
+          <div class="cube-face analytics-section">
+            <h1 class="section-title">Analytics Dashboard</h1>
+            <div class="analytics-filters">
+              <div class="date-range">
+                <label>Date Range:</label>
+                <select>
+                  <option>Last 7 Days</option>
+                  <option>Last 30 Days</option>
+                  <option>Last 90 Days</option>
+                  <option>This Year</option>
+                  <option>Custom Range</option>
+                </select>
+              </div>
+              <div class="comparison">
+                <label>Compare To:</label>
+                <select>
+                  <option>Previous Period</option>
+                  <option>Same Period Last Year</option>
+                  <option>None</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="analytics-overview">
+              <div class="analytics-card">
+                <h3>Revenue</h3>
+                <div class="analytics-value">$854,621</div>
+                <div class="analytics-change positive">+8.2%</div>
+                <canvas class="analytics-chart" width="100" height="40"></canvas>
+              </div>
+              
+              <div class="analytics-card">
+                <h3>Orders</h3>
+                <div class="analytics-value">3,254</div>
+                <div class="analytics-change positive">+5.7%</div>
+                <canvas class="analytics-chart" width="100" height="40"></canvas>
+              </div>
+              
+              <div class="analytics-card">
+                <h3>Customers</h3>
+                <div class="analytics-value">12,458</div>
+                <div class="analytics-change positive">+12.5%</div>
+                <canvas class="analytics-chart" width="100" height="40"></canvas>
+              </div>
+              
+              <div class="analytics-card">
+                <h3>Avg. Order Value</h3>
+                <div class="analytics-value">$262.64</div>
+                <div class="analytics-change positive">+2.3%</div>
+                <canvas class="analytics-chart" width="100" height="40"></canvas>
+              </div>
+            </div>
+            
+            <div class="analytics-charts">
+              <div class="chart-container revenue-chart">
+                <div class="chart-header">
+                  <h3>Revenue Breakdown</h3>
+                  <div class="chart-controls">
+                    <button class="chart-control active" data-view="daily">Daily</button>
+                    <button class="chart-control" data-view="weekly">Weekly</button>
+                    <button class="chart-control" data-view="monthly">Monthly</button>
+                  </div>
+                </div>
+                <canvas id="revenueChart" width="600" height="300"></canvas>
+              </div>
+              
+              <div class="chart-container product-chart">
+                <div class="chart-header">
+                  <h3>Top Products</h3>
+                  <div class="chart-controls">
+                    <button class="chart-control active" data-metric="revenue">By Revenue</button>
+                    <button class="chart-control" data-metric="quantity">By Quantity</button>
+                  </div>
+                </div>
+                <canvas id="productChart" width="400" height="300"></canvas>
+              </div>
+            </div>
+            
+            <div class="analytics-details">
+              <div class="detail-card customer-acquisition">
+                <h3>Customer Acquisition</h3>
+                <canvas id="acquisitionChart" width="300" height="200"></canvas>
+                <div class="detail-stats">
+                  <div class="detail-stat">
+                    <span class="stat-label">New Customers</span>
+                    <span class="stat-value">1,245</span>
+                    <span class="stat-change positive">+15.3%</span>
+                  </div>
+                  <div class="detail-stat">
+                    <span class="stat-label">Returning Customers</span>
+                    <span class="stat-value">3,782</span>
+                    <span class="stat-change positive">+7.8%</span>
+                  </div>
+                  <div class="detail-stat">
+                    <span class="stat-label">Churn Rate</span>
+                    <span class="stat-value">2.4%</span>
+                    <span class="stat-change negative">+0.3%</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="detail-card geographic">
+                <h3>Geographic Distribution</h3>
+                <div class="map-container">
+                  <div class="map-placeholder">
+                    <div class="map-overlay"></div>
+                  </div>
+                </div>
+                <div class="detail-stats">
+                  <div class="detail-stat">
+                    <span class="stat-label">Top Region</span>
+                    <span class="stat-value">North America</span>
+                    <span class="stat-percentage">42%</span>
+                  </div>
+                  <div class="detail-stat">
+                    <span class="stat-label">Fastest Growing</span>
+                    <span class="stat-value">Asia Pacific</span>
+                    <span class="stat-change positive">+23.5%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Settings Section -->
+          <div class="cube-face settings-section">
+            <h1 class="section-title">Settings</h1>
+            <div class="settings-container">
+              <div class="settings-tabs">
+                <button class="settings-tab active" data-tab="profile">Profile</button>
+                <button class="settings-tab" data-tab="account">Account</button>
+                <button class="settings-tab" data-tab="appearance">Appearance</button>
+                <button class="settings-tab" data-tab="notifications">Notifications</button>
+                <button class="settings-tab" data-tab="security">Security</button>
+              </div>
+              
+              <div class="settings-content">
+                <div class="settings-panel profile-panel active">
+                  <h2>Profile Settings</h2>
+                  <div class="profile-settings">
+                    <div class="profile-avatar">
+                      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile">
+                      <button class="change-avatar-btn">Change Avatar</button>
+                    </div>
+                    <div class="profile-form">
+                      <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" value="John Doe">
+                      </div>
+                      <div class="form-group">
+                        <label>Job Title</label>
+                        <input type="text" value="Product Manager">
+                      </div>
+                      <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" value="john.doe@example.com">
+                      </div>
+                      <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" value="+1 (555) 123-4567">
+                      </div>
+                      <div class="form-group">
+                        <label>Bio</label>
+                        <textarea rows="4">Product manager with 5+ years of experience in SaaS and e-commerce platforms.</textarea>
+                      </div>
+                      <div class="form-actions">
+                        <button class="save-btn">Save Changes</button>
+                        <button class="cancel-btn">Cancel</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="settings-panel account-panel">
+                  <h2>Account Settings</h2>
+                  <div class="account-settings">
+                    <div class="form-group">
+                      <label>Username</label>
+                      <input type="text" value="johndoe">
+                    </div>
+                    <div class="form-group">
+                      <label>Language</label>
+                      <select>
+                        <option selected>English (US)</option>
+                        <option>Spanish</option>
+                        <option>French</option>
+                        <option>German</option>
+                        <option>Japanese</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Time Zone</label>
+                      <select>
+                        <option selected>(GMT-08:00) Pacific Time</option>
+                        <option>(GMT-07:00) Mountain Time</option>
+                        <option>(GMT-06:00) Central Time</option>
+                        <option>(GMT-05:00) Eastern Time</option>
+                        <option>(GMT+00:00) UTC</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Date Format</label>
+                      <select>
+                        <option selected>MM/DD/YYYY</option>
+                        <option>DD/MM/YYYY</option>
+                        <option>YYYY-MM-DD</option>
+                      </select>
+                    </div>
+                    <div class="form-actions">
+                      <button class="save-btn">Save Changes</button>
+                      <button class="cancel-btn">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="settings-panel appearance-panel">
+                  <h2>Appearance Settings</h2>
+                  <div class="appearance-settings">
+                    <div class="theme-options">
+                      <h3>Theme</h3>
+                      <div class="theme-selector">
+                        <div class="theme-option light active">
+                          <div class="theme-preview light-preview"></div>
+                          <span>Light</span>
+                        </div>
+                        <div class="theme-option dark">
+                          <div class="theme-preview dark-preview"></div>
+                          <span>Dark</span>
+                        </div>
+                        <div class="theme-option system">
+                          <div class="theme-preview system-preview"></div>
+                          <span>System</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="color-options">
+                      <h3>Accent Color</h3>
+                      <div class="color-selector">
+                        <div class="color-option blue active">
+                          <div class="color-preview" style="background-color: #4361ee;"></div>
+                          <span>Blue</span>
+                        </div>
+                        <div class="color-option purple">
+                          <div class="color-preview" style="background-color: #7209b7;"></div>
+                          <span>Purple</span>
+                        </div>
+                        <div class="color-option green">
+                          <div class="color-preview" style="background-color: #2ec4b6;"></div>
+                          <span>Green</span>
+                        </div>
+                        <div class="color-option orange">
+                          <div class="color-preview" style="background-color: #ff9f1c;"></div>
+                          <span>Orange</span>
+                        </div>
+                        <div class="color-option pink">
+                          <div class="color-preview" style="background-color: #f72585;"></div>
+                          <span>Pink</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layout-options">
+                      <h3>Layout</h3>
+                      <div class="form-group">
+                        <label>Sidebar Position</label>
+                        <select>
+                          <option selected>Left</option>
+                          <option>Right</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label>Content Density</label>
+                        <select>
+                          <option>Compact</option>
+                          <option selected>Default</option>
+                          <option>Comfortable</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-actions">
+                      <button class="save-btn">Save Changes</button>
+                      <button class="cancel-btn">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="settings-panel notifications-panel">
+                  <h2>Notification Settings</h2>
+                  <div class="notification-settings">
+                    <div class="notification-group">
+                      <h3>Email Notifications</h3>
+                      <div class="notification-option">
+                        <div class="notification-info">
+                          <h4>New Orders</h4>
+                          <p>Receive notifications when new orders are placed</p>
+                        </div>
+                        <div class="toggle-switch">
+                          <input type="checkbox" id="email-orders" checked>
+                          <label for="email-orders"></label>
+                        </div>
+                      </div>
+                      <div class="notification-option">
+                        <div class="notification-info">
+                          <h4>User Registrations</h4>
+                          <p>Receive notifications when new users register</p>
+                        </div>
+                        <div class="toggle-switch">
+                          <input type="checkbox" id="email-users" checked>
+                          <label for="email-users"></label>
+                        </div>
+                      </div>
+                      <div class="notification-option">
+                        <div class="notification-info">
+                          <h4>Product Updates</h4>
+                          <p>Receive notifications when products are updated</p>
+                        </div>
+                        <div class="toggle-switch">
+                          <input type="checkbox" id="email-products">
+                          <label for="email-products"></label>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="notification-group">
+                      <h3>Push Notifications</h3>
+                      <div class="notification-option">
+                        <div class="notification-info">
+                          <h4>New Orders</h4>
+                          <p>Receive push notifications when new orders are placed</p>
+                        </div>
+                        <div class="toggle-switch">
+                          <input type="checkbox" id="push-orders" checked>
+                          <label for="push-orders"></label>
+                        </div>
+                      </div>
+                      <div class="notification-option">
+                        <div class="notification-info">
+                          <h4>User Registrations</h4>
+                          <p>Receive push notifications when new users register</p>
+                        </div>
+                        <div class="toggle-switch">
+                          <input type="checkbox" id="push-users">
+                          <label for="push-users"></label>
+                        </div>
+                      </div>
+                      <div class="notification-option">
+                        <div class="notification-info">
+                          <h4>Product Updates</h4>
+                          <p>Receive push notifications when products are updated</p>
+                        </div>
+                        <div class="toggle-switch">
+                          <input type="checkbox" id="push-products">
+                          <label for="push-products"></label>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                      <button class="save-btn">Save Changes</button>
+                      <button class="cancel-btn">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="settings-panel security-panel">
+                  <h2>Security Settings</h2>
+                  <div class="security-settings">
+                    <div class="password-section">
+                      <h3>Change Password</h3>
+                      <div class="form-group">
+                        <label>Current Password</label>
+                        <input type="password">
+                      </div>
+                      <div class="form-group">
+                        <label>New Password</label>
+                        <input type="password">
+                      </div>
+                      <div class="form-group">
+                        <label>Confirm New Password</label>
+                        <input type="password">
+                      </div>
+                      <button class="update-password-btn">Update Password</button>
+                    </div>
+                    
+                    <div class="two-factor-section">
+                      <h3>Two-Factor Authentication</h3>
+                      <p>Add an extra layer of security to your account</p>
+                      <div class="toggle-switch large">
+                        <input type="checkbox" id="two-factor">
+                        <label for="two-factor"></label>
+                      </div>
+                      <button class="setup-2fa-btn">Set Up Two-Factor</button>
+                    </div>
+                    
+                    <div class="sessions-section">
+                      <h3>Active Sessions</h3>
+                      <div class="session-list">
+                        <div class="session-item current">
+                          <div class="session-info">
+                            <h4>Current Session</h4>
+                            <p>Windows 10 • Chrome • New York, USA</p>
+                            <span class="session-time">Active now</span>
+                          </div>
+                        </div>
+                        <div class="session-item">
+                          <div class="session-info">
+                            <h4>Mobile App</h4>
+                            <p>iOS 15 • iPhone • San Francisco, USA</p>
+                            <span class="session-time">Active 2 hours ago</span>
+                          </div>
+                          <button class="revoke-btn">Revoke</button>
+                        </div>
+                        <div class="session-item">
+                          <div class="session-info">
+                            <h4>Tablet</h4>
+                            <p>iPadOS • Safari • Chicago, USA</p>
+                            <span class="session-time">Active 1 day ago</span>
+                          </div>
+                          <button class="revoke-btn">Revoke</button>
+                        </div>
+                      </div>
+                      <button class="revoke-all-btn">Revoke All Other Sessions</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Toast Notifications -->
+  <div class="toast-container">
+    <!-- Toasts will be added dynamically -->
+  </div>
+  
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
